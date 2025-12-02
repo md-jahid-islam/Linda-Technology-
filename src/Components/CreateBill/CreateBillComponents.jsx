@@ -332,7 +332,7 @@ const CreateBillComponents = () => {
                                         </td>
                                         
                                         {/* Total Price (Readonly) */}
-                                        <td className="p-2 text-right font-semibold bg-gray-100 text-blue-800">
+                                        <td className="p-2 text-right font-semibold bg-gray-100 text-black">
                                             {item.totalPrice}
                                         </td>
                                         
@@ -352,7 +352,7 @@ const CreateBillComponents = () => {
                             <tfoot>
                                 <tr className="bg-gray-200 font-extrabold border-t-2 border-red-600">
                                     <td colSpan="4" className="p-3 text-right text-gray-800">GRAND TOTAL (TK)</td>
-                                    <td className="p-3 text-right text-lg text-blue-700">{grandTotal}</td>
+                                    <td className="p-3 text-right text-lg text-black">{grandTotal}</td>
                                     <td className="p-2 text-center no-print">
                                         <button 
                                             onClick={addItemRow} 

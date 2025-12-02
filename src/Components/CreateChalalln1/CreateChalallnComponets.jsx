@@ -33,7 +33,7 @@ import { Link } from 'react-router-dom';
         email2: "ferdous@gmaillindarechnologybd.com",
         website: "lindatechnologybd.com",
         docType: "M/S LT. CHALLAN",
-        themeColor: "gray-600"
+        themeColor: "red-600"
     };
 
     // ======== Initial state for header details (used for reset) ========== // 
@@ -96,7 +96,7 @@ import { Link } from 'react-router-dom';
     };
 
     // ======== Note: Tailwind requires the full class string. Using dynamic string concatenation like ========= // 
-    const { name, logoText, slogan, headOffice, paperFactory, contact, email1, email2, website, docType, themeColor } = companyData;
+    const { name, slogan, headOffice, paperFactory, contact, email1, email2, website, docType, themeColor } = companyData;
     const textColor = `text-${themeColor}`;
     const bgColor = `bg-${themeColor}`;
 
@@ -169,7 +169,7 @@ import { Link } from 'react-router-dom';
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fillRule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clipRule="evenodd" />
                     </svg>
-                    <Link target='blank' to={"/CreateBill"}>M/S LT. Back To Bill</Link>
+                    <Link className='' target='blank' to={"/CreateBill"}>M/S LT. Back To Bill</Link>
                 </button>
 
                 {/* 🖨️ Print / PDF Download Button (Hidden during print) */}

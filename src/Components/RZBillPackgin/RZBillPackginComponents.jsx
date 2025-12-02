@@ -192,62 +192,22 @@ import { Link } from 'react-router-dom';
                 {/* 🔵 Customer Details Input Section */}
                 <div className="p-6 pt-2 space-y-2 text-sm">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <InfoField
-                            label="Company Name"
-                            name="companyName"
-                            value={billInfo.companyName}
-                            onChange={handleBillInfoChange}
-                            className="pr-4"
-                        />
-                        <InfoField
-                            label="Invoice No."
-                            name="invoiceNo"
-                            value={billInfo.invoiceNo}
-                            onChange={handleBillInfoChange}
-                            className="pr-4"
-                        />
+                        <InfoField label="Company Name" name="companyName" value={billInfo.companyName} onChange={handleBillInfoChange}className="pr-4"/>
+                        <InfoField label="Invoice No." name="invoiceNo" value={billInfo.invoiceNo} onChange={handleBillInfoChange} className="pr-4" />
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <InfoField
-                            label="Address"
-                            name="address"
-                            value={billInfo.address}
-                            onChange={handleBillInfoChange}
-                        />
-                        <InfoField
-                            label="Date"
-                            name="date"
-                            value={billInfo.date}
-                            onChange={handleBillInfoChange}
-                            type="date"
-                        />
+                        <InfoField label="Address" name="address" value={billInfo.address} onChange={handleBillInfoChange}/>
+                        <InfoField label="Date" name="date" value={billInfo.date} onChange={handleBillInfoChange} type="date"/>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <InfoField
-                            label="Contact Person"
-                            name="contactPerson"
-                            value={billInfo.contactPerson}
-                            onChange={handleBillInfoChange}
-                            className="pr-4"
-                        />
-                         <InfoField
-                            label="Mobile"
-                            name="mobile"
-                            value={billInfo.mobile}
-                            onChange={handleBillInfoChange}
-                            type="tel"
-                        />
+                        <InfoField label="Contact Person" name="contactPerson" value={billInfo.contactPerson} onChange={handleBillInfoChange} className="pr-4" />
+                         <InfoField label="Mobile" name="mobile" value={billInfo.mobile} onChange={handleBillInfoChange} type="tel" />
                     </div>
                     
                     <div className="grid grid-cols-1">
-                        <InfoField
-                            label="P.O. No."
-                            name="poNo"
-                            value={billInfo.poNo}
-                            onChange={handleBillInfoChange}
-                        />
+                        <InfoField label="P.O. No." name="poNo" value={billInfo.poNo} onChange={handleBillInfoChange} />
                     </div>
                 </div>
 
@@ -274,13 +234,7 @@ import { Link } from 'react-router-dom';
                                         
                                         {/* Description */}
                                         <td className="p-0 border-r border-gray-400">
-                                            <input
-                                                type="text"
-                                                value={item.description}
-                                                onChange={(e) => handleItemChange(item.id, 'description', e.target.value)}
-                                                placeholder="Item description"
-                                                className="w-full h-full p-2 border-none focus:ring-0 focus:outline-none bg-transparent print-input"
-                                            />
+                                            <input type="text" value={item.description} onChange={(e) => handleItemChange(item.id, 'description', e.target.value)}placeholder="Item description"className="w-full h-full p-2 border-none focus:ring-0 focus:outline-none bg-transparent print-input"/>
                                         </td>
                                         
                                         {/* Total Quantity KG/Pcs */}
@@ -369,7 +323,6 @@ import { Link } from 'react-router-dom';
                         <p><strong><span className="text-red-600">Delivery</span></strong> : Within 3/5 days after receive the irrevocable & confirmed letter of credit order.</p>
                         <p><strong><span className="text-red-600">Offer Validity</span></strong>: One week from the date of issue.</p>
                     </div>
-
 
                     {/* Signature Input Lines */}
                     <div className="flex justify-between items-end text-xs mt-12 pt-4">

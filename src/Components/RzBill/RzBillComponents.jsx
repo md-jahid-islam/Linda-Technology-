@@ -10,7 +10,7 @@ const SELLER_DATA = {
     contact: "0161-959-9595, 0182-138-5320, 01702-246036, 01998-589117",
     website: "www.lindatechnologybd.com",
     email: "symoom@gmaillindarechnologybd.com, ferdous@gmaillindarechnologybd.com",
-    docType: "RZ BILL",
+    docType: "M/S RZ BILL",
     themeColor: "red-600"
 };
 
@@ -263,9 +263,9 @@ const RzBillComponents = () => {
                     <h3 className="font-bold text-gray-800 flex items-center mb-3 text-lg"><Calculator className="w-5 h-5 mr-2" /> Items & Calculations</h3>
                     <div className="overflow-x-auto rounded-lg shadow-lg border border-gray-300">
                         <table className="min-w-full border-collapse text-sm">
-                            <thead className="bg-blue-600 text-white sticky top-0">
+                            <thead className="bg-red-600 text-white sticky top-0">
                                 <tr>
-                                    <th className="p-3 w-[5%]">#</th>
+                                    <th className="p-3 w-[5%]">SI. No. </th>
                                     <th className="p-3 w-[40%] text-left">Description</th>
                                     <th className="p-3 w-[15%]">Quantity (KG/Pcs)</th>
                                     <th className="p-3 w-[15%]">Unit Price (TK)</th>
@@ -315,7 +315,7 @@ const RzBillComponents = () => {
                                         </td>
                                         
                                         {/* Total Price (Readonly) */}
-                                        <td className="p-2 text-right font-semibold bg-gray-100 text-blue-800">
+                                        <td className="p-2 text-right font-semibold bg-gray-100 text-black">
                                             {item.totalPrice}
                                         </td>
                                         
@@ -335,7 +335,7 @@ const RzBillComponents = () => {
                             <tfoot>
                                 <tr className="bg-gray-200 font-extrabold border-t-2 border-red-600">
                                     <td colSpan="4" className="p-3 text-right text-gray-800">GRAND TOTAL (TK)</td>
-                                    <td className="p-3 text-right text-lg text-blue-700">{grandTotal}</td>
+                                    <td className="p-3 text-right text-lg text-black">{grandTotal}</td>
                                     <td className="p-2 text-center no-print">
                                         <button 
                                             onClick={addItemRow} 
@@ -371,7 +371,7 @@ const RzBillComponents = () => {
                         
                         {/* Bill Specific Terms */}
                         <div className="mt-6 p-4 border border-gray-300 bg-blue-50 rounded-lg text-xs shadow-inner no-print">
-                            <p className={`font-black mb-1 text-blue-700 text-sm`}>Terms & Conditions:</p>
+                            <p className={`font-black mb-1 text-black text-sm`}>Terms & Conditions:</p>
                             <ul className="list-disc pl-5 space-y-1 text-gray-700">
                                 <li>Payment: By Check / Cash.</li>
                                 <li>Delivery: Within 3/5 days after receipt of the irrevocable & confirmed letter of credit order.</li>
@@ -424,14 +424,14 @@ const RzBillComponents = () => {
                             />
                             
                             <p className=' border-t-2 border-gray-800 mt-2 '></p>
-                            <p className="font-bold text-blue-700 text-sm mt-1">{SELLER_DATA.name}</p>
+                            <p className="font-bold text-black text-sm mt-1">{SELLER_DATA.name}</p>
                             <p className="italic text-gray-600">(Authorized Signature)</p>
                         </div>
                     </div>
                 </div>
 
                 {/* 🔵 Blue Footer Bar */}
-                <div className={`h-4 bg-blue-700`}></div>
+                <div className={`h-4 bg-red-600`}></div>
 
             </div>
         </div>
