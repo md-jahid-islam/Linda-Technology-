@@ -41,7 +41,7 @@ import React from "react";
     ],
   },
   {
-    name: "Mst. Eitysha Eity",
+    name: "Asiya Nasrin",
     designation: "Manager",
     image: "/images/team/eity.jpg",
     description:
@@ -82,7 +82,7 @@ import React from "react";
   },
   {
     name: "MD. Jahidul Islam",
-    designation: "Web & Software Engineer",
+    designation: "Web & Software Developer",
     image: "/images/team/jahid.jpg",
     description:
       "A creative and passionate web & software engineer specializing in modern front-end and full stack technologies. He designs and develops responsive, high-performance websites and applications for business solutions.",
@@ -133,8 +133,7 @@ import React from "react";
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="group bg-white border border-gray-200 rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col"
-            >
+              className="group bg-white border border-gray-200 rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col">
               {/* Image */}
               <div className="flex justify-center mb-5">
                 <img
@@ -160,14 +159,13 @@ import React from "react";
               {/* Skills */}
               <div className="mb-5">
                 <h5 className="text-sm font-semibold mb-2 text-gray-700">
-                  Skills:
+                Skills:
                 </h5>
                 <div className="flex flex-wrap gap-2">
                   {member.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full"
-                    >
+                      className="text-xs bg-green-100 text-green-700 px-3 py-1 rounded-full">
                       {skill}
                     </span>
                   ))}
@@ -183,8 +181,7 @@ import React from "react";
                   {member.companies.map((company, i) => (
                     <span
                       key={i}
-                      className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full"
-                    >
+                      className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
                       {company}
                     </span>
                   ))}

@@ -161,16 +161,15 @@ import { Link } from 'react-router-dom';
       <>
         <div className="p-2 sm:p-4 lg:p-6 bg-gray-50 min-h-screen font-sans">           
             {/* Inject Custom Print Styles and JIT workaround */}
-            <style dangerouslySetInnerHTML={{__html: printStyles}} />
-            
+            <style dangerouslySetInnerHTML={{__html: printStyles}} />            
             {/* ⬅️ Back Button (Hidden during print) */}
             <div className="max-w-7xl mx-auto flex justify-between mb-4 print-hidden">
                 <button onClick={handleBack}  className="bg-red-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-red-700 hover:shadow-lg hover:scale-[1.02] transition-all duration-300 ease-in-out flex items-center space-x-2">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clipRule="evenodd" />
+                    <path fillRule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clipRule="evenodd" />
                     </svg>
                     <Link className='' target='blank' to={"/CreateBill"}>M/S LT. Back To Bill</Link>
-                </button>
+                    </button>
 
                 {/* 🖨️ Print / PDF Download Button (Hidden during print) */}
                 <button onClick={handlePrint} className="px-4 py-2 bg-red-600 text-white font-bold rounded-lg shadow-xl hover:bg-red-700 transition duration-200 flex items-center space-x-2" >
@@ -180,22 +179,19 @@ import { Link } from 'react-router-dom';
                 </button>
             </div>
 
-            <div className="max-w-7xl mx-auto bg-white border-2 border-gray-400 shadow-2xl rounded-lg overflow-hidden transition-all duration-300 challan-container">
-                
+            <div className="max-w-7xl mx-auto bg-white border-2 border-gray-400 shadow-2xl rounded-lg overflow-hidden transition-all duration-300 challan-container">                
                 {/* 🔴 Header Section (Company Info) */}
                 <header className="p-4 sm:p-6 border-b border-gray-300">
-               <div className="flex flex-col ml-[200px] sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
+               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 sm:gap-8">
                    {/* Left - Logo */}
                    <div className="flex-shrink-0">
                      <img src="/images/ms.jpg.png" alt="logo" className="w-28 h-28 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-red-500 shadow-lg"/>
-                   </div>
-                 
+                   </div>                 
                    {/* Right - Text */}
                     <div className="flex flex-col justify-center text-center sm:text-left">
                     <h1 className="text-2xl sm:text-3xl font-extrabold text-red-600 print:text-black">
                     {name}
-                     </h1>  
-                                 
+                     </h1>                                  
                      <p className="text-sm sm:text-base text-gray-800 font-bold mt-1">
                      {slogan}
                      </p>
@@ -218,7 +214,7 @@ import { Link } from 'react-router-dom';
 
                 {/* 🔴 Document Type Label */}
                 <div className={`text-center py-2 ${bgColor} print:bg-gray-200`}>
-                    <span className="text-white font-black text-xl sm:text-2xl uppercase tracking-widest print:text-black">{docType}</span>
+                <span className="text-white font-black text-xl sm:text-2xl uppercase tracking-widest print:text-black">{docType}</span>
                 </div>
 
                 {/* 🔴 Customer Details Section (WITH INPUTS) */}
@@ -289,7 +285,7 @@ import { Link } from 'react-router-dom';
                                 <tr className="bg-gray-100 font-bold border-t-2 border-gray-500 print:bg-gray-200">
                                     <td colSpan="4" className="border border-gray-400 p-2 text-right">Grand Total (Total of Qty Kgs/Box) :</td>
                                     <td className="border border-gray-400 p-2 text-right">
-                                        {grandTotalKgsBox}
+                                     {grandTotalKgsBox}
                                     </td>
                                 </tr>
                             </tfoot>
@@ -323,6 +319,6 @@ import { Link } from 'react-router-dom';
         </div>     
       </>
     );
-};
+ };
 
-export default CreateChalallnComponets;
+ export default CreateChalallnComponets;
